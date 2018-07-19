@@ -1,5 +1,7 @@
 package zoo;
 
+
+
 public class Zoo {
 	private String nom;
 	private Zone savaneAfr;
@@ -15,10 +17,38 @@ public class Zoo {
 			aquarium = new Zone ("Aquarium");
 			fermeReptiles = new Zone("La ferme aux reptiles");
 			voliere = new Zone ("La voliere");
-			
+		
 			
 		}
+		
 
+			public void addAnimal(Animal animal) {
+				if (animal.getfamille().equals("Mammifère")&& animal.getRegimeAlimentaire().equals("carnivore")) {
+					 carnivore.addAnimal(animal);
+					
+				}else if (animal.getfamille().equals("Mammifère")&& animal.getRegimeAlimentaire().equals("herbivore")) {
+					 savaneAfr.addAnimal(animal);
+					
+				}else if (animal.getfamille().equals("Reptile")) {
+					 fermeReptiles.addAnimal(animal);
+					
+				}else if (animal.getfamille().equals("Poisson")) {
+					 aquarium.addAnimal(animal);
+					
+				}
+			}
+			
+			public void listerAnnimaux() {
+				savaneAfr.listerAnnimaux();
+				carnivore.listerAnnimaux();
+				aquarium.listerAnnimaux();
+				fermeReptiles.listerAnnimaux();
+				voliere.listerAnnimaux();
+				
+				
+				
+			}
+			
 		public String getNom() {
 			return nom;
 		}
