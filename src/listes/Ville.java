@@ -13,6 +13,11 @@ public class Ville {
 		this.nom = nom;
 		this.nbHabitants = nbHabitants;
 	}
+	@Override
+	public String toString() {
+		return "Ville nom : " + nom + ", Nombre d'Habitants : " + nbHabitants + "\n";
+	}
+
 	
 	public String getNom() {
 		return nom;
@@ -27,6 +32,7 @@ public class Ville {
 		this.nbHabitants = nbHabitants;
 	}
 
+	
 	
 
 

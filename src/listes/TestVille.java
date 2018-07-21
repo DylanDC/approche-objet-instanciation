@@ -1,7 +1,7 @@
 package listes;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+
 
 
 
@@ -49,18 +49,16 @@ public class TestVille {
 
 			for (int j=0;j<listVille.size();j++) {
 				if (z<listVille.get(j).getNbHabitants()) {}
-				listVille.toString().toUpperCase();
-
+				listVille.get(j).setNom(listVille.get(j).getNom().toUpperCase());
 
 
 			}
 		}
-		for (int k=0;k<listVille.size();k++) {
 
-
-			System.out.println(listVille.get(k).getNom() + " "+listVille.get(k).getNbHabitants());
-		}
+		
 		System.out.println("La plus grande ville est :"+nomVilleG + " avec "+nbhabG+ " Habitants");
 		System.out.println("La plus petite ville est :"+nomVilleP + " avec "+nbhabP+ " Habitants");
+		System.out.println(listVille);
 	}
 }
+
