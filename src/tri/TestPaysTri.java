@@ -15,7 +15,7 @@ public class TestPaysTri {
 
 	public static void main(String[] args) {
 		
-			List<Pays> list = new ArrayList<>();
+			List <Pays>list = new ArrayList<>();
 	        list.add(new Pays("United States of America", 324_811_000, 55_805.204,0));
 	        list.add(new Pays("France", 67_795_000, 41_180.697,0));
 	        list.add(new Pays("Allemagne", 82_800_000, 45_888.423,0));
@@ -37,13 +37,36 @@ public class TestPaysTri {
 	      		 while (it.hasNext()){
 	                 System.out.println(it.next());
 	             }
-	      		
+	     //--------------------------------------------------------
+		      		//CompareTo	
 	      		 
-	      		Collections.sort(list);
+	      		
+	      		 Collections.sort(list);
+	      		 
 	            it = list.iterator();
 	            while (it.hasNext()){
 	                System.out.println(it.next());
-	            }
+	            
+	            
+	      		//--------------------------------------------------------
+		      		//Comparator Habitant
+	      		 
+	      		  Collections.sort(list, new ComparatorHabitant());
+	              it = list.iterator();
+	              while (it.hasNext()){
+	                  System.out.println(it.next());
+	              }
+	              
+	            //--------------------------------------------------------
+		      		//Comparator Habitant
+	              Collections.sort(list, new ComparatorPibHabitant());
+	              it = list.iterator();
+	              while (it.hasNext()){
+	                  System.out.println(it.next());
+	              }
+	              
+	              
 	}
 
+}
 }
