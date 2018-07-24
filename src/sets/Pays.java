@@ -5,6 +5,9 @@ public class Pays {
 	private int nbHabitants;
 	private double pibHabitants;
 	private double calculPIB;
+	
+	//--------------------------------------------
+		//Constructeur
 	public Pays(String nom, int nbHabitants, double pibHabitants, double calculPIB) {
 		super();
 		this.nom = nom;
@@ -12,7 +15,15 @@ public class Pays {
 		this.pibHabitants = pibHabitants;
 		this.calculPIB = calculPIB;
 	}
+	//--------------------------------------------
+		//To String [formatage en sortie]
+	@Override
+	public String toString() {
+		return "nom=" + nom + " nbHabitants=" + nbHabitants + " pibHabitants=" + pibHabitants +  " PIB Total :"+calculPIB+ "\n";
+	}
 	
+	//--------------------------------------------
+			//Getter and Setter
 	public double getCalculPIB() {
 		return calculPIB;
 	}
@@ -25,11 +36,7 @@ public class Pays {
 		this.pibHabitants = pibHabitants;
 	}
 
-	@Override
-	public String toString() {
-		return "nom=" + nom + " nbHabitants=" + nbHabitants + " pibHabitants=" + pibHabitants +  " PIB Total :"+calculPIB+ "\n";
-	}
-
+	
 	public String getNom() {
 		return nom;
 	}
