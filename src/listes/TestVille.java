@@ -57,7 +57,7 @@ public class TestVille {
 			}
 		}
 
-
+		System.out.println("test");
 		System.out.println("La plus grande ville est :"+nomVilleG + " avec "+nbhabG+ " Habitants");
 		System.out.println("La plus petite ville est :"+nomVilleP + " avec "+nbhabP+ " Habitants");
 		System.out.println(listVille);
