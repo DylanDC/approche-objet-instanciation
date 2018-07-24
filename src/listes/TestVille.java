@@ -30,7 +30,7 @@ public class TestVille {
 
 		for(int i=0;i<listVille.size();i++) {
 			if (y<listVille.get(i).getNbHabitants()) {
-
+				y=listVille.get(i).getNbHabitants();
 				nomVilleG=listVille.get(i).getNom();
 				nbhabG = listVille.get(i).getNbHabitants();
 
@@ -42,20 +42,22 @@ public class TestVille {
 				if (y>listVille.get(w).getNbHabitants()) {
 					nomVilleP=listVille.get(w).getNom();
 					nbhabP = listVille.get(w).getNbHabitants();
-
+					y=listVille.get(w).getNbHabitants();
 
 				}
+				
 			}
 
 			for (int j=0;j<listVille.size();j++) {
-				if (z<listVille.get(j).getNbHabitants()) {}
-				listVille.get(j).setNom(listVille.get(j).getNom().toUpperCase());
+				if (listVille.get(j).getNbHabitants()>z) {
+					listVille.get(j).setNom(listVille.get(j).getNom().toUpperCase());
+					}
 
 
 			}
 		}
 
-		
+
 		System.out.println("La plus grande ville est :"+nomVilleG + " avec "+nbhabG+ " Habitants");
 		System.out.println("La plus petite ville est :"+nomVilleP + " avec "+nbhabP+ " Habitants");
 		System.out.println(listVille);
