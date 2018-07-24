@@ -107,13 +107,24 @@ public class Pays implements Comparable<Pays>{
 		this.pibHabitants = pibHabitants;
 	}
 
-
+	//--------------------------------------------
+	//compare to nom
+	
+	
+	public int compareTo(Pays name) {
+		// TODO Auto-generated method stub
+		Pays name1 = (Pays) name;
+		int resulComparaisonNom = this.nom.compareTo(name1.getNom());
+		return resulComparaisonNom;
+	}
 	
 	//--------------------------------------------
 		//Compare to pib
 	
-	@Override
-	public int compareTo(Pays o) {
+	
+/*
+ 	public int compareTo(Pays o) {
+ 
 		if(this.pibHabitants<o.pibHabitants)
 			
 		return -1;
@@ -122,5 +133,5 @@ public class Pays implements Comparable<Pays>{
 	
 		return 1;
 	}
-	
+	*/
 }

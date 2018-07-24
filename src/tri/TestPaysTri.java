@@ -3,6 +3,7 @@ package tri;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
@@ -26,8 +27,7 @@ public class TestPaysTri {
 	        list.add(new Pays("Inde", 1_281_935_911, 5_855.306,0));
 	        
 	        
-	     //--------------------------------------------------------
-	      		//mise comparator
+	     
 	      		
 	      		
 	      		Iterator<Pays> it=list.iterator();
