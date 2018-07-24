@@ -1,6 +1,6 @@
 package tri;
 
-public abstract class Pays implements Comparable<Pays> {
+public class Pays implements Comparable<Pays>{
 	private String nom;
 	private int nbHabitants;
 	private double pibHabitants;
@@ -27,8 +27,49 @@ public abstract class Pays implements Comparable<Pays> {
 	//--------------------------------------------
 	//Getter and Setter
 	
+	
+	
 	public String getNom() {
 		return nom;
+	}
+
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		long temp;
+		temp = Double.doubleToLongBits(calculPIB);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		result = prime * result + nbHabitants;
+		result = prime * result + ((nom == null) ? 0 : nom.hashCode());
+		temp = Double.doubleToLongBits(pibHabitants);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		return result;
+	}
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Pays other = (Pays) obj;
+		if (Double.doubleToLongBits(calculPIB) != Double.doubleToLongBits(other.calculPIB))
+			return false;
+		if (nbHabitants != other.nbHabitants)
+			return false;
+		if (nom == null) {
+			if (other.nom != null)
+				return false;
+		} else if (!nom.equals(other.nom))
+			return false;
+		if (Double.doubleToLongBits(pibHabitants) != Double.doubleToLongBits(other.pibHabitants))
+			return false;
+		return true;
 	}
 
 
@@ -65,8 +106,21 @@ public abstract class Pays implements Comparable<Pays> {
 	public void setPibHabitants(double pibHabitants) {
 		this.pibHabitants = pibHabitants;
 	}
-	
-	
-	
 
+
+	
+	//--------------------------------------------
+		//Compare to pib
+	
+	@Override
+	public int compareTo(Pays o) {
+		if(this.pibHabitants<o.pibHabitants)
+			
+		return -1;
+		
+		else if(o.pibHabitants<this.pibHabitants);
+	
+		return 1;
+	}
+	
 }
